@@ -1,0 +1,17 @@
+[user]
+	email = fred-jan@myonlinestore.com
+	name = Fred-Jan van der Eijken
+[alias]
+	pf = push --force-with-lease --force-if-includes
+    set-upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
+[core]
+	editor = vim
+[rebase]
+	autosquash = true
+[push]
+	autoSetupRemote = true
+	default = current
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main
