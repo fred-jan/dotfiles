@@ -1,6 +1,7 @@
 [user]
 	email = fred-jan@myonlinestore.com
 	name = Fred-Jan van der Eijken
+	signingkey = BF4E655F544D8B9C
 [alias]
     ca = commit -a -m
 	pf = push --force-with-lease --force-if-includes
@@ -16,3 +17,5 @@
 	rebase = true
 [init]
 	defaultBranch = main
+[commit]
+	gpgsign = true

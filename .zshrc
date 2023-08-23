@@ -1,3 +1,4 @@
+source ~/.config/zsh/config/common.zsh
 source ~/.config/zsh/config/dot.zsh
 source ~/.config/zsh/config/aliases.zsh
 source ~/.config/zsh/config/mos.zsh
