@@ -2,6 +2,7 @@
 	email = fred-jan@myonlinestore.com
 	name = Fred-Jan van der Eijken
 [alias]
+    ca = commit -a -m
 	pf = push --force-with-lease --force-if-includes
     set-upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
 [core]
