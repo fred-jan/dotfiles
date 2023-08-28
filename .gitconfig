@@ -4,6 +4,7 @@
 	signingkey = BF4E655F544D8B9C
 [alias]
     ca = commit -a -m
+    fixup = "!git add . && git commit -a --fixup=${1:-$(git rev-parse HEAD)} && git rebase -i ${1:-$(git rev-parse HEAD~2)}~1"
 	pf = push --force-with-lease --force-if-includes
     set-upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
 [core]
@@ -19,3 +20,9 @@
 	defaultBranch = main
 [commit]
 	gpgsign = true
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

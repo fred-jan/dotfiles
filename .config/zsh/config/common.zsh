@@ -10,3 +10,5 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "$terminfo[kcuu1]" history-beginning-search-backward-end
 bindkey "$terminfo[kcud1]" history-beginning-search-forward-en
 
+# Allow suggestions to be chosen using arrow keys
+zstyle ':completion:*' menu select
