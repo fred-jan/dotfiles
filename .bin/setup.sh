@@ -10,6 +10,10 @@ curl https://raw.githubusercontent.com/agnoster/agnoster-zsh-theme/master/agnost
 git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
 vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
 
+# vim-airline
+git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline
+vim -u NONE -c "helptags ~/.vim/pack/dist/start/vim-airline/doc" -c q
+
 # Install nerd font
 curl -fLO --create-dirs --output-dir ~/.fonts https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Hack/Regular/HackNerdFontMono-Regular.ttf
 fc-cache -f -v
