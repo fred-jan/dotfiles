@@ -71,3 +71,5 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 set guifont=Hack\ Nerd\ Font\ Mono:h11
 
 let g:airline_powerline_fonts = 1
+
+let g:NERDTreeGitStatusUseNerdFonts = 1

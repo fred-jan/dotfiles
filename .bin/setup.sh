@@ -22,6 +22,9 @@ vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-airline/doc" -c q
 git clone git@github.com:tiagofumo/vim-nerdtree-syntax-highlight.git ~/.vim/pack/vendor/start/vim-nerdtree-syntax-highlight
 vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-nerdtree-syntax-highlight/doc" -c q
 
+# nerdtree-git-plugin (needs to be loaded before vim-devicons)
+git clone git@github.com:Xuyuanp/nerdtree-git-plugin.git ~/.vim/pack/vendor/start/nerdtree-git-plugin
+
 # vim-devicons
 git clone git@github.com:ryanoasis/vim-devicons.git ~/.vim/pack/vendor/start/vim-devicons
 vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-devicons/doc" -c q
