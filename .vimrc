@@ -73,3 +73,6 @@ set guifont=Hack\ Nerd\ Font\ Mono:h11
 let g:airline_powerline_fonts = 1
 
 let g:NERDTreeGitStatusUseNerdFonts = 1
+
+" Decrease update time frmo 4s to 0.1 to observe git status changes faster
+set updatetime=100

@@ -10,6 +10,13 @@ curl -fLO --create-dirs --output-dir ~/.fonts https://github.com/ryanoasis/nerd-
 fc-cache -f -v
 
 # Vim
+# editorconfig-vim
+git clone https://github.com/editorconfig/editorconfig-vim.git ~/.vim/pack/vendor/start/editorconfig-vim
+
+# vim-gitgutter
+git clone git@github.com:airblade/vim-gitgutter.git ~/.vim/pack/vendor/start/vim-gitgutter
+vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-gitgutter/doc" -c q
+
 # NERDTree plugin
 git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
 vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
