@@ -62,3 +62,5 @@ set hlsearch
 " Set the commands to save in history default number is 20.
 set history=1000
 
+" Start NERDTree and put the cursor back in the other window.
+autocmd VimEnter * NERDTree | wincmd p
