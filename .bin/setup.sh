@@ -9,3 +9,7 @@ curl https://raw.githubusercontent.com/agnoster/agnoster-zsh-theme/master/agnost
 # NERDTree plugin
 git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
 vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
+
+# Install nerd font
+curl -fLO --create-dirs --output-dir ~/.fonts https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Hack/Regular/HackNerdFontMono-Regular.ttf
+fc-cache -f -v
