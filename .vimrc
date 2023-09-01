@@ -76,3 +76,10 @@ let g:NERDTreeGitStatusUseNerdFonts = 1
 
 " Decrease update time frmo 4s to 0.1 to observe git status changes faster
 set updatetime=100
+
+" Enable FZF preview window
+let g:fzf_preview_window = ['right,50%', 'ctrl-/']
+
+" FZF key bindings
+nnoremap <silent> <C-f> :Files<CR>
+nmap <F8> :TagbarToggle<CR>

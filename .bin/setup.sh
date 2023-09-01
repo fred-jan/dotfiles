@@ -16,9 +16,21 @@ git clone https://github.com/editorconfig/editorconfig-vim.git ~/.vim/pack/vendo
 # rainbow_csv
 git clone git@github.com:mechatroner/rainbow_csv.git ~/.vim/pack/vendor/start/rainbow_csv
 
+# fzf
+git clone https://github.com/junegunn/fzf.git ~/.vim/pack/vendor/start/fzf
+git clone https://github.com/junegunn/fzf.vim.git ~/.vim/pack/vendor/start/fzf.vim
+vim -u NONE -c "helptags ~/.vim/pack/vendor/start/fzf.vim/doc" -c q
+
 # vim-gitgutter
 git clone git@github.com:airblade/vim-gitgutter.git ~/.vim/pack/vendor/start/vim-gitgutter
 vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-gitgutter/doc" -c q
+
+# tagbar
+git clone git@github.com:preservim/tagbar.git ~/.vim/pack/vendor/start/tagbar
+vim -u NONE -c "helptags ~/.vim/pack/vendor/start/tagbar/doc" -c q
+
+# Debian-based installation of ctags (TODO: generalize)
+sudo apt install universal-ctags
 
 # NERDTree plugin
 git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
