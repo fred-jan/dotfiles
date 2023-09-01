@@ -10,6 +10,9 @@ curl -fLO --create-dirs --output-dir ~/.fonts https://github.com/ryanoasis/nerd-
 fc-cache -f -v
 
 # Vim
+## Darcula theme
+git clone git@github.com:doums/darcula.git ~/.vim/pack/themes/start/darcula
+
 # editorconfig-vim
 git clone https://github.com/editorconfig/editorconfig-vim.git ~/.vim/pack/vendor/start/editorconfig-vim
 
@@ -31,6 +34,10 @@ vim -u NONE -c "helptags ~/.vim/pack/vendor/start/tagbar/doc" -c q
 
 # Debian-based installation of ctags (TODO: generalize)
 sudo apt install universal-ctags
+
+# vim-indent-guides plugin
+git clone git@github.com:preservim/vim-indent-guides.git ~/.vim/pack/vendor/start/vim-indent-guides
+vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-indent-guides/doc" -c q
 
 # NERDTree plugin
 git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree

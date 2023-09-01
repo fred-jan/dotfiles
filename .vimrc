@@ -80,6 +80,13 @@ set updatetime=100
 " Enable FZF preview window
 let g:fzf_preview_window = ['right,50%', 'ctrl-/']
 
-" FZF key bindings
-nnoremap <silent> <C-f> :Files<CR>
-nmap <F8> :TagbarToggle<CR>
+" Enable indent guides on startup
+let g:indent_guides_enable_on_vim_startup = 1
+
+" key bindings
+nmap <silent> <C-n> :Tags<CR>
+nmap <silent> <C-S-n> :Files<CR>
+nmap <F12> :TagbarToggle<CR>
+nmap <C-F12> :BTags<CR>
+
+colorscheme darcula
