@@ -13,6 +13,9 @@ fc-cache -f -v
 # editorconfig-vim
 git clone https://github.com/editorconfig/editorconfig-vim.git ~/.vim/pack/vendor/start/editorconfig-vim
 
+# rainbow_csv
+git clone git@github.com:mechatroner/rainbow_csv.git ~/.vim/pack/vendor/start/rainbow_csv
+
 # vim-gitgutter
 git clone git@github.com:airblade/vim-gitgutter.git ~/.vim/pack/vendor/start/vim-gitgutter
 vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-gitgutter/doc" -c q
