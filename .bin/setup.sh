@@ -35,25 +35,25 @@ vim -u NONE -c "helptags ~/.vim/pack/vendor/start/tagbar/doc" -c q
 # Debian-based installation of ctags (TODO: generalize)
 sudo apt install universal-ctags
 
-# vim-indent-guides plugin
-git clone git@github.com:preservim/vim-indent-guides.git ~/.vim/pack/vendor/start/vim-indent-guides
-vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-indent-guides/doc" -c q
+# identline plugin
+git clone https://github.com/Yggdroot/indentLine.git ~/.vim/pack/vendor/start/indentLine
+vim -u NONE -c "helptags  ~/.vim/pack/vendor/start/indentLine/doc" -c "q"
 
-# NERDTree plugin
-git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
-vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
+# Fern plugin
+git clone git@github.com:lambdalisue/fern.vim.git ~/.vim/pack/vendor/start/fern.vim
+
+# Combines nerdfont and Fern plugins for file type icons
+git clone git@github.com:lambdalisue/fern-renderer-nerdfont.vim.git ~/.vim/pack/vendor/start/fern-renderer-nerdfont.vim
+
+# Simplified version of vim-devicons
+git clone git@github.com:lambdalisue/nerdfont.vim.git ~/.vim/pack/vendor/start/nerdfont.vim
+
+# Show Git status next to nodes in Fern
+git clone git@github.com:lambdalisue/fern-git-status.vim.git ~/.vim/pack/vendor/start/fern-git-status.vim
+
+# Enable file type coloring in Fern
+git clone git@github.com:lambdalisue/glyph-palette.vim.git ~/.vim/pack/vendor/start/glyph-palette.vim
 
 # vim-airline
 git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/vendor/start/vim-airline
 vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-airline/doc" -c q
-
-# vim-nerdtree-syntax-highlight
-git clone git@github.com:tiagofumo/vim-nerdtree-syntax-highlight.git ~/.vim/pack/vendor/start/vim-nerdtree-syntax-highlight
-vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-nerdtree-syntax-highlight/doc" -c q
-
-# nerdtree-git-plugin (needs to be loaded before vim-devicons)
-git clone git@github.com:Xuyuanp/nerdtree-git-plugin.git ~/.vim/pack/vendor/start/nerdtree-git-plugin
-
-# vim-devicons
-git clone git@github.com:ryanoasis/vim-devicons.git ~/.vim/pack/vendor/start/vim-devicons
-vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-devicons/doc" -c q

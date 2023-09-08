@@ -63,30 +63,58 @@ set hlsearch
 set history=1000
 
 " Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * if &filetype !=# 'gitcommit' && &filetype !=# 'gitrebase' | NERDTree | endif | wincmd p
+" autocmd VimEnter * if &filetype !=# 'gitcommit' && &filetype !=# 'gitrebase' | NERDTree | endif | wincmd p
+
+function! OpenFern()
+  execute "Fern . -reveal=" . expand("%") . " -drawer -width=35 -toggle"
+endfunction
+
+" Autostart Fern and put cursor back in other window
+autocmd VimEnter * nested if &filetype !=# 'gitcommit' && &filetype !=# 'gitrebase' | call OpenFern() | endif | wincmd p
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+" autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 set guifont=Hack\ Nerd\ Font\ Mono:h11
 
 let g:airline_powerline_fonts = 1
 
-let g:NERDTreeGitStatusUseNerdFonts = 1
+" Enable Nerd Font in Fern for rendering file type icons
+let g:fern#renderer = "nerdfont"
 
-" Decrease update time frmo 4s to 0.1 to observe git status changes faster
+let g:fern#default_hidden=1
+
+" Activate glyph-palette plugin for Fer
+autocmd FileType fern call glyph_palette#apply()
+autocmd FileType fern set nonumber
+
+" Decrease update time from 4s to 0.1 to observe git status changes faster
 set updatetime=100
 
 " Enable FZF preview window
 let g:fzf_preview_window = ['right,50%', 'ctrl-/']
 
-" Enable indent guides on startup
-let g:indent_guides_enable_on_vim_startup = 1
+command! -bang -nargs=? -complete=dir HFiles
+  \ call fzf#vim#files(<q-args>, {'source': 'ag --hidden --ignore .git -g ""'}, <bang>0)
 
 " key bindings
-nmap <silent> <C-n> :Tags<CR>
-nmap <silent> <C-S-n> :Files<CR>
+nmap <silent> <C-t> :Tags<CR>
+nmap <silent> <C-a> :Files<CR>
+" Search in Git-versioned files
+nmap <silent> <C-g> :GFiles<CR>
+" nmap <silent> <C-h> :History<CR>
+" Search line in current file
+nmap <silent> <C-f> :BLines<CR>
 nmap <F12> :TagbarToggle<CR>
 nmap <C-F12> :BTags<CR>
 
+" window shortcuts
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
 colorscheme darcula
+
+set splitbelow
+set termwinsize=10x0
