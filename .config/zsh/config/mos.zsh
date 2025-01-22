@@ -2,7 +2,9 @@
 source <(kafkactl completion zsh)
 
 alias k=kubectl
+
 alias composer8.1='php8.1 /usr/local/bin/composer "$@"'
+alias composer8.2='php8.2 /usr/local/bin/composer "$@"'
 
 alias mos-configuration-make='make -C /home/fred-jan/dev/configuration'
 alias mos-customer-make='make -C /home/fred-jan/dev/customer'
@@ -34,8 +36,10 @@ function start-day() {
 
 function dc() {
     if [ -f ".env.compose" ]; then
-        docker-compose --env-file=.env.compose $@
+        docker compose --env-file=.env.compose $@
     else
-        docker-compose $@
+        docker compose $@
     fi
 }
+
+alias docker-logs='docker ps -q | xargs -L 1 -P `docker ps | wc -l` docker logs --since 30s -f'
